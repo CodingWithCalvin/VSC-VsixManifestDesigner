@@ -1,0 +1,15 @@
+name: Publish to VS Code Marketplace
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    uses: CodingWithCalvin/.github/.github/workflows/vsc-vsix-publish.yml@main
+    with:
+      extension-name: VSC-VsixManifestDesigner
+      display-name: "VSIX Manifest Designer"
+      marketplace-id: CodingWithCalvin.vsix-manifest-designer
+      description: "A visual designer for VS Code extension manifest files"
+      hashtags: "#vscode #extension #manifest #designer"
+    secrets: inherit

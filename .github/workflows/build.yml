@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    paths:
+      - 'src/**'
+      - 'webview-ui/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
+      - '.github/workflows/build.yml'
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: CodingWithCalvin/.github/.github/workflows/vsc-vsix-build.yml@main
+    with:
+      extension-name: VSC-VsixManifestDesigner

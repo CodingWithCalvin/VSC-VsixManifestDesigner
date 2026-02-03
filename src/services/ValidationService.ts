@@ -109,7 +109,7 @@ export class ValidationService {
   public validateField(
     field: string,
     value: unknown,
-    manifest?: VscodeManifest
+    _manifest?: VscodeManifest
   ): ValidationError[] {
     const errors: ValidationError[] = [];
 

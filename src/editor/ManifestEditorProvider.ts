@@ -201,7 +201,6 @@ export class ManifestEditorProvider implements vscode.CustomTextEditorProvider {
     if (result && result.length > 0) {
       const selectedUri = result[0];
       // Convert to relative path from the package.json location
-      const packageDir = vscode.Uri.joinPath(document.uri, '..');
       let relativePath = vscode.workspace.asRelativePath(selectedUri, false);
 
       // Ensure the path starts with ./

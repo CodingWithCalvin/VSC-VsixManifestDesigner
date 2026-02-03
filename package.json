@@ -35,7 +35,7 @@
     "vscode:prepublish": "npm run build",
     "build": "npm run build:extension && npm run build:webview",
     "build:extension": "tsx esbuild.ts",
-    "build:webview": "cd webview-ui && npm run build",
+    "build:webview": "cd webview-ui && npm ci && npm run build",
     "watch": "tsx esbuild.ts --watch",
     "watch:webview": "cd webview-ui && npm run dev",
     "install:all": "npm install && cd webview-ui && npm install",

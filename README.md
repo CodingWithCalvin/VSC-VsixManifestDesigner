@@ -50,13 +50,13 @@ Editing VS Code extension manifests (`package.json`) can be tedious. With comple
 ### Getting Started
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CodingWithCalvin/VSC-VsixManifestDesigner/main/resources/1-open-with.png" alt="Open With Context Menu" width="400">
+  <img src="https://raw.githubusercontent.com/CodingWithCalvin/VSC-VsixManifestDesigner/main/resources/1-open-with.png" alt="Open With Context Menu" width="700">
   <br>
   <em>Right-click package.json and select "Open With..."</em>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CodingWithCalvin/VSC-VsixManifestDesigner/main/resources/2-select-editor.png" alt="Select Editor" width="400">
+  <img src="https://raw.githubusercontent.com/CodingWithCalvin/VSC-VsixManifestDesigner/main/resources/2-select-editor.png" alt="Select Editor" width="700">
   <br>
   <em>Choose "Extension Manifest Designer"</em>
 </p>

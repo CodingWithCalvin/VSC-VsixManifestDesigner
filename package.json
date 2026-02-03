@@ -32,10 +32,10 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "npm run compile:extension && npm run compile:webview",
-    "compile:extension": "tsx esbuild.ts",
-    "compile:webview": "cd webview-ui && npm run build",
+    "vscode:prepublish": "npm run build",
+    "build": "npm run build:extension && npm run build:webview",
+    "build:extension": "tsx esbuild.ts",
+    "build:webview": "cd webview-ui && npm run build",
     "watch": "tsx esbuild.ts --watch",
     "watch:webview": "cd webview-ui && npm run dev",
     "install:all": "npm install && cd webview-ui && npm install",

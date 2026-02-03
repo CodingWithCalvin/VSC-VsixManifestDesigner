@@ -1,0 +1,52 @@
+{
+  "name": "vsix-manifest-designer",
+  "displayName": "VSIX Manifest Designer",
+  "description": "A visual designer for VS Code extension manifest (package.json) files",
+  "version": "0.0.1",
+  "publisher": "CodingWithCalvin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodingWithCalvin/VSC-VsixManifestDesigner"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "vsixManifestDesigner.editor",
+        "displayName": "Extension Manifest Designer",
+        "selector": [
+          {
+            "filenamePattern": "package.json"
+          }
+        ],
+        "priority": "option"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "npm run compile:extension && npm run compile:webview",
+    "compile:extension": "tsx esbuild.ts",
+    "compile:webview": "cd webview-ui && npm run build",
+    "watch": "tsx esbuild.ts --watch",
+    "watch:webview": "cd webview-ui && npm run dev",
+    "install:all": "npm install && cd webview-ui && npm install",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "esbuild": "^0.19.8",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.2"
+  }
+}

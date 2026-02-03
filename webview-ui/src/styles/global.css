@@ -1,0 +1,299 @@
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--vscode-editor-background);
+  color: var(--vscode-editor-foreground);
+  font-family: var(--vscode-font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: var(--vscode-font-size, 13px);
+  line-height: 1.5;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--vscode-foreground);
+  font-weight: 600;
+}
+
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.1em; }
+
+a {
+  color: var(--vscode-textLink-foreground);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--vscode-textLink-activeForeground);
+  text-decoration: underline;
+}
+
+/* Form elements */
+input,
+textarea,
+select {
+  background-color: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  border: 1px solid var(--vscode-input-border, transparent);
+  border-radius: 2px;
+  padding: 4px 8px;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--vscode-focusBorder);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--vscode-input-placeholderForeground);
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Buttons */
+button {
+  background-color: var(--vscode-button-background);
+  color: var(--vscode-button-foreground);
+  border: none;
+  border-radius: 2px;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+button:hover {
+  background-color: var(--vscode-button-hoverBackground);
+}
+
+button:focus {
+  outline: 1px solid var(--vscode-focusBorder);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background-color: var(--vscode-button-secondaryBackground);
+  color: var(--vscode-button-secondaryForeground);
+}
+
+button.secondary:hover {
+  background-color: var(--vscode-button-secondaryHoverBackground);
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: var(--vscode-checkbox-background);
+  border: 1px solid var(--vscode-checkbox-border);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--vscode-checkbox-background);
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--vscode-checkbox-foreground);
+  font-size: 12px;
+}
+
+input[type="checkbox"]:focus {
+  border-color: var(--vscode-focusBorder);
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--vscode-foreground);
+  font-size: 0.9em;
+}
+
+/* Cards */
+.card {
+  width: 100%;
+  background-color: var(--vscode-editor-inactiveSelectionBackground);
+  border: 1px solid var(--vscode-panel-border);
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.card-header {
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Help text */
+.help-text {
+  font-size: 0.85em;
+  color: var(--vscode-descriptionForeground);
+  margin-top: 4px;
+}
+
+/* Validation states */
+.error {
+  border-color: var(--vscode-inputValidation-errorBorder) !important;
+}
+
+.error-message {
+  color: var(--vscode-errorForeground);
+  font-size: 0.85em;
+  margin-top: 4px;
+}
+
+.warning {
+  border-color: var(--vscode-inputValidation-warningBorder) !important;
+}
+
+.warning-message {
+  color: var(--vscode-editorWarning-foreground);
+  font-size: 0.85em;
+  margin-top: 4px;
+}
+
+/* Tags/chips */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  background-color: var(--vscode-badge-background);
+  color: var(--vscode-badge-foreground);
+  border-radius: 10px;
+  font-size: 0.85em;
+}
+
+.tag button {
+  background: none;
+  color: inherit;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.tag button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--vscode-scrollbarSlider-background);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--vscode-scrollbarSlider-hoverBackground);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--vscode-scrollbarSlider-activeBackground);
+}
+
+/* All content should fill available width */
+section,
+.card,
+.help-section {
+  width: 100% !important;
+}
+
+/* Utility classes */
+.hidden {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

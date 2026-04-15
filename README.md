@@ -17,21 +17,6 @@
   </a>
 </p>
 
-<p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=CodingWithCalvin.vsix-manifest-designer">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/CodingWithCalvin.vsix-manifest-designer?style=for-the-badge" alt="Marketplace Version">
-  </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=CodingWithCalvin.vsix-manifest-designer">
-    <img src="https://img.shields.io/visual-studio-marketplace/i/CodingWithCalvin.vsix-manifest-designer?style=for-the-badge" alt="Installs">
-  </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=CodingWithCalvin.vsix-manifest-designer">
-    <img src="https://img.shields.io/visual-studio-marketplace/d/CodingWithCalvin.vsix-manifest-designer?style=for-the-badge" alt="Downloads">
-  </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=CodingWithCalvin.vsix-manifest-designer">
-    <img src="https://img.shields.io/visual-studio-marketplace/r/CodingWithCalvin.vsix-manifest-designer?style=for-the-badge" alt="Rating">
-  </a>
-</p>
-
 ---
 
 ## 🤔 Why?
